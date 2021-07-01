@@ -56,12 +56,6 @@ const App: React.FC = () => {
   }
 
   const allUsers = usersState.allUsers.map((user, i) => (
-    // <div key={i}>
-    //   <p>{user.name}</p>
-    //   <p>{user.age}</p>
-    //   <p>{user.job}</p>
-    //   <button onClick={() => deleteHandler(i)}>Delete user</button>
-    // </div>
     <User
       key={i}
       name={user.name}
@@ -70,7 +64,6 @@ const App: React.FC = () => {
       deleteUser={() => deleteHandler(i)}
     />
   ))
-  // console.log(usersState.currentUser);
 
   return (
     <div className="container">
